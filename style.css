@@ -1,0 +1,39 @@
+@font-face { font-family: Vazirmatn; src: url(Vazirmatn-Regular.ttf); font-weight: 400; }
+@font-face { font-family: Vazirmatn; src: url(Vazirmatn-Bold.ttf); font-weight: 700; }
+
+:root {
+  --bg: #0b0b12; --surface: #14141f; --border: #2a2a3d;
+  --text: #f4f4f8; --muted: #a1a1b5;
+  --brand: linear-gradient(135deg, #8b5cf6, #ec4899, #f59e0b);
+}
+@media (prefers-color-scheme: light) {
+  :root { --bg: #f7f6fb; --surface: #ffffff; --border: #e4e1ee; --text: #15131f; --muted: #5e5a72; }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: Vazirmatn, Tahoma, sans-serif; line-height: 2;
+}
+.wrap { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 32px; }
+header img { width: 48px; height: 48px; border-radius: 14px; }
+header a { color: inherit; text-decoration: none; font-weight: 700; font-size: 22px; }
+nav { margin-inline-start: auto; display: flex; gap: 16px; font-size: 14px; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover { color: var(--text); }
+h1 { font-size: 30px; line-height: 1.5; margin: 0 0 8px; }
+h2 { font-size: 20px; margin: 32px 0 4px; }
+p, li { color: var(--muted); }
+.hero { text-align: center; padding: 40px 0; }
+.hero img { width: 112px; height: 112px; border-radius: 30px; }
+.grad { background: var(--brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin: 32px 0; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 16px 18px; }
+.card b { display: block; color: var(--text); }
+.card span { color: var(--muted); font-size: 14px; }
+.btn {
+  display: inline-block; margin-top: 16px; padding: 12px 28px; border-radius: 16px;
+  background: var(--brand); color: #fff; text-decoration: none; font-weight: 700;
+}
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); }
+footer a { color: var(--muted); }
